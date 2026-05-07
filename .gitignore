@@ -1,0 +1,26 @@
+# OS / editor cruft
+.DS_Store
+.vscode/
+*.swp
+*~
+
+# Stata / data (real data lives in OneDrive, not in repo)
+*.dta
+*.csv
+*.dct
+*.gph
+*.smcl
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Pandoc-generated outputs (regenerable from .md)
+# (existing .docx files are kept; this only blocks new ones if any pattern matches)
+
+# Sensitive
+.env
+*.key
+*.pem

@@ -1,0 +1,29 @@
+{
+  "name": "HCAHPS",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway",
+    "--dns=1.1.1.1",
+    "--dns=8.8.8.8"
+  ],
+
+  "mounts": [
+    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
+  ],
+
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "anthropic.claude-code"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}

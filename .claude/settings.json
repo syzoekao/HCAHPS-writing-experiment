@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l fig_tables.xlsx)",
+      "Bash(unzip -p /Users/zoekao/Documents/HCAHPS/fig_tables.xlsx xl/workbook.xml)",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "mcp__zotero__zotero_search_collections",
+      "mcp__zotero__zotero_create_collection",
+      "mcp__zotero__zotero_add_by_url",
+      "mcp__zotero__zotero_list_libraries",
+      "mcp__zotero__zotero_manage_collections",
+      "Bash(pandoc framing.md -o framing.docx --from gfm --to docx)",
+      "Bash(pandoc reference-research.md -o reference-research.docx --from gfm --to docx)",
+      "Bash(git config *)",
+      "Bash(ssh-add -l)",
+      "Bash(gh auth *)",
+      "Bash(chmod +x /Users/zoekao/Documents/HCAHPS/.devcontainer/post-create.sh)",
+      "Read(//workspaces/**)",
+      "Read(//home/vscode/.claude/**)",
+      "Bash(python3 /workspaces/HCAHPS/hello_world.py)",
+      "Bash(python3 -c \"import sys, json; [print\\(json.dumps\\(json.loads\\(l\\), indent=2\\)[:500]\\) for l in sys.stdin]\")",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
