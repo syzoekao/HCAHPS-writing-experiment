@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "started_at": "2026-05-21T14:12:47Z",
+  "round_cap": 3,
+  "current_round": 3,
+  "rounds": [
+    {
+      "round": 1,
+      "agent": "grader",
+      "action": "initial-grading",
+      "completed_at": "2026-05-21T14:30:00Z",
+      "summary": {"core": 60, "support": 53, "optional": 9, "unresolved": 1}
+    },
+    {
+      "round": 2,
+      "agent": "evaluator",
+      "action": "propose",
+      "completed_at": "2026-05-21T15:10:00Z",
+      "proposal_count": 3,
+      "upgrades": 1,
+      "downgrades": 2,
+      "closest_calls_present": true
+    },
+    {
+      "round": 3,
+      "agent": "grader",
+      "action": "respond",
+      "completed_at": "2026-05-21T15:30:00Z",
+      "responses": [
+        {
+          "bullet_id": "results-p14-2",
+          "proposed_grade": "core",
+          "verdict": "accept",
+          "final_grade": "core",
+          "rationale": "The bullet is the only link explaining why the 4% and 6% change figures differ; cutting it leaves a completeness gap."
+        },
+        {
+          "bullet_id": "disc-p16-2",
+          "proposed_grade": "optional",
+          "verdict": "accept",
+          "final_grade": "optional",
+          "rationale": "Topic sentence already states the asymmetry and the stability point is minor; the central argument is intact without this bullet."
+        },
+        {
+          "bullet_id": "results-p11-2",
+          "proposed_grade": "optional",
+          "verdict": "accept",
+          "final_grade": "optional",
+          "rationale": "A phrasing-consistency instruction with no argument content; the logic chain is fully intact without it."
+        }
+      ],
+      "accepted": 3,
+      "countered": 0,
+      "rejected": 0
+    }
+  ],
+  "stop_reason": "full-agreement"
+}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(outline)",
+      "Skill(outline:*)",
+      "Skill(scientific-writing-style)",
+      "Skill(scientific-writing-style:*)"
+    ]
+  }
+}
