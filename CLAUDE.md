@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-This is a health economics research project studying HCAHPS (Hospital Consumer Assessment of Healthcare Providers and Systems) overall star ratings, comparing 2017 (pre-COVID baseline) to 2024 (post-pandemic stabilization). The primary analysis uses Stata. The manuscript targets *Health Affairs* (primary), with *JAMA Health Forum* and *Health Affairs Scholar* as alternates.
+This is a health economics research project studying HCAHPS (Hospital Consumer Assessment of Healthcare Providers and Systems) overall star ratings, comparing 2017 (pre-COVID baseline) to 2024 (post-pandemic stabilization). The primary analysis uses Stata. The manuscript targets the *American Journal of Public Health* (AJPH; primary), with *Health Affairs*, *JAMA Health Forum*, and *Health Affairs Scholar* as alternates. (Primary target switched from Health Affairs to AJPH on 2026-05-16; see `framing.md` for implications.)
+
+**Manuscript title (working, per analyst):** *Determinants of Hospital HCAHPS Star Ratings and Changes Over Time, 2017-2024*.
 
 The central quantitative finding — and the paper's key contribution — is a **levels-vs-change asymmetry**: observable hospital, operational, and community factors explain ~24% of cross-sectional variation in star ratings but <6% of trajectory variation (2017→2024 change).
 
