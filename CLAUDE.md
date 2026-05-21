@@ -56,7 +56,7 @@ All data live in Windows OneDrive paths (`C:\Users\z0055u8k\OneDrive - Siemens H
 - `reference-research.md` — Reference notebook for managing citations; candidates are appended here for asynchronous review before importing to Zotero.
 - The Zotero MCP integration (`mcp__zotero__*`) is available for reference management.
 - Manuscript drafting uses the `outline`, `draft`, `self-review`, and `peer-review` skills.
-- Convert `.md` files to `.docx` with: `pandoc <file>.md -o <file>.docx --from gfm --to docx`
+- Convert `.md` files to `.docx` with: `pandoc <file>.md -o <file>.docx --from gfm --to docx --reference-doc=pandoc-reference.docx` (run from the repo root). The reference doc `pandoc-reference.docx` sets Calibri for both body text and headings — without it, pandoc's default theme renders body text in Cambria.
 
 ## Experiment audit trail
 
