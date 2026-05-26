@@ -26,16 +26,14 @@ Several covariates shifted substantially across the two snapshots; others were n
 | % age 65 and over | 15.6 (4.2) | 18.0 (4.5) | +2.4 |
 | % White | 76.3 (16.3) | 65.6 (20.0) | **−10.7** |
 | % Black | 11.5 (13.1) | 11.2 (12.6) | −0.3 |
-| % Hispanic* | 8.2 (9.2) | 10.6 (10.5) | +2.5 |
+| % Hispanic | 8.2 (9.2) | 10.6 (10.5) | +2.5 |
 | % foreign-born | 10.7 (9.9) | 11.3 (10.0) | +0.6 |
 | % bachelor's degree or above | 20.5 (7.9) | 24.1 (8.8) | +3.7 |
 | % below federal poverty line | 14.5 (4.8) | 12.6 (4.2) | −1.9 |
 | % age 65+ below poverty line | 9.0 (3.4) | 10.6 (3.5) | +1.6 |
 | Median household income (USD) | 29,844 (7,409) | 42,657 (11,236) | **+12,813** |
 
-\* The variable labelled "% Hispanic" in `do 2.do` is constructed from the Asian-population numerator (see [methods.md §9](methods.md#9-notes-and-methodological-flags) flag 2); the figures above reflect that construction and should be re-verified.
-
-The two largest changes were the **0.18-star decline in mean overall rating** and the **111-minute drop in median ED time**. The ED change was large enough (a 38% reduction) that the underlying CMS measure definition or reporting protocol may have shifted across the window; this should be checked against the CMS measure documentation before publication. Community shifts were modest in most variables but two stand out: the **10-percentage-point drop in mean % White** and the **$12,800 rise in mean median household income**. Both are larger than would be expected from typical demographic drift across seven years and may reflect American Community Survey (ACS) tabulation or inflation-adjustment differences rather than population change; see [§8](#8-notes-and-flags) flag 4.
+The two largest changes were the **0.18-star decline in mean overall rating** and the **111-minute drop in median ED time**. The ED change was large enough (a 38% reduction) that the underlying CMS measure definition or reporting protocol may have shifted across the window. The analyst flagged this as potentially fundamental to the ED interpretation (review of 2026-05-22): **before this drop is reported as a real operational gain**, it must be validated against (a) the CMS Hospital Outpatient Quality Reporting (OQR) Specifications Manual for the 2017 and 2024 vintages of OP-18b (median ED-arrival-to-departure time) and any FY2021 IPPS Final Rule changes, and (b) the published ED-throughput literature for corroborating national trends. See [§8](#8-notes-and-flags) flag 3. Community shifts were modest in most variables but two stand out: the **10-percentage-point drop in mean % White** and the **$12,800 rise in mean median household income**. Both are larger than would be expected from typical demographic drift across seven years and may reflect American Community Survey (ACS) tabulation or inflation-adjustment differences rather than population change; see [§8](#8-notes-and-flags) flag 4.
 
 ## 4. Cross-sectional findings (2017 and 2024)
 
@@ -58,7 +56,7 @@ Table 2 columns (1) and (2) report the cross-sectional ordinary least squares (O
 | % age 65 and over | −3.360*** (0.442) | −2.659*** (0.488) |
 | % White | 0.388 (0.297) | 0.533 (0.415) |
 | % Black | −0.471 (0.257) | −0.193 (0.411) |
-| % Hispanic* | −0.501 (0.405) | 0.372 (0.653) |
+| % Hispanic | −0.501 (0.405) | 0.372 (0.653) |
 | % foreign-born | −1.103*** (0.427) | −1.636*** (0.463) |
 | % bachelor's degree or above | 2.086*** (0.615) | 3.581*** (0.655) |
 | % below federal poverty line | −1.917** (0.930) | −0.678 (0.831) |
@@ -67,8 +65,6 @@ Table 2 columns (1) and (2) report the cross-sectional ordinary least squares (O
 | Constant | 3.435*** (0.450) | 3.774*** (0.502) |
 | **R²** | **0.236** | **0.242** |
 | **N** | **2,380** | **2,380** |
-
-\* See [§8](#8-notes-and-flags) flag 2 on the % Hispanic / % Asian construction issue.
 
 **Government hospitals scored highest, non-profits lowest.** In both years, non-profit hospitals scored roughly half a star below government hospitals (−0.51 in 2017, −0.58 in 2024). For-profit hospitals matched government in 2017 (0.024, not significant) but had moved 0.11 stars below government by 2024 — i.e., the for-profit penalty *appeared* over the seven-year window, while the non-profit penalty was already large and stable.
 
@@ -95,7 +91,7 @@ Table 2 columns (3) and (4) report change models regressing the 2017→2024 chan
 | Δ % age 65 and over | −2.744 (1.808) | −1.118 (1.951) |
 | Δ % White | 0.246 (0.260) | 0.775 (0.412) |
 | Δ % Black | −0.045 (1.315) | 0.837 (1.468) |
-| Δ % Hispanic* | 0.059 (0.915) | 0.117 (0.935) |
+| Δ % Hispanic | 0.059 (0.915) | 0.117 (0.935) |
 | Δ % foreign-born | 1.872 (1.544) | 2.205 (1.657) |
 | Δ % bachelor's degree or above | −2.762 (1.457) | −2.685 (1.541) |
 | Δ % below federal poverty line | 0.339 (0.937) | 1.105 (1.249) |
@@ -104,8 +100,6 @@ Table 2 columns (3) and (4) report change models regressing the 2017→2024 chan
 | Constant | −0.111 (0.089) | 0.331 (0.508) |
 | **R²** | **0.039** | **0.056** |
 | **N** | **2,380** | **2,380** |
-
-\* See [§8](#8-notes-and-flags) flag 2 on the % Hispanic / % Asian construction issue.
 
 **The change story is operational, not demographic.** Of the thirteen change-in-covariate variables, only Δ ED time and Δ median household income reached statistical significance (the latter with a coefficient of 0.000 to three decimals — significant but practically null). A one-minute reduction in ED time was associated with 0.001–0.002 stars gained over the window. Given the 111-minute mean drop in ED time, the implied average gain from ED improvement was roughly 0.11–0.22 stars — meaningful in magnitude but offset by other forces driving the −0.18-star mean decline.
 
@@ -139,9 +133,9 @@ These items reflect substantive issues to resolve or document before the Results
 
 1. **The % self-reported poor health coefficient is positive.** Counterintuitive in both 2017 (+0.020**) and 2024 (+0.039***) cross-sectional models. Plausible explanations include collider-style confounding (counties with more reported poor health may have other characteristics that raise patient satisfaction), survey participation patterns, or a substantive mechanism the analyst would recognize. The sign should be addressed in the Discussion rather than left unexamined.
 
-2. **% Hispanic was constructed from the Asian-population numerator.** Per [methods.md §9](methods.md#9-notes-and-methodological-flags) flag 2: `do 2.do` line 31 sets `prop_hispanic = pop_asian/pop`. The Table 1 % Hispanic means (8.2 → 10.6) and Table 2 coefficients on % Hispanic / Δ % Hispanic therefore reflect % Asian, not % Hispanic. The analysis should be re-run with the corrected variable; reported coefficients may move.
+2. **% Hispanic construction — resolved.** The analyst confirmed (2026-05-22) that `prop_hispanic` is built from the ACS `A35AA` table (Persons: Hispanic or Latino). The earlier reading of [stata/do 2.do](../stata/do%202.do) line 31 as a coding bug was incorrect; no re-run is needed and the Table 1 means / Table 2 coefficients on % Hispanic and Δ % Hispanic stand as reported. *Kept here as a closed flag so the resolution is traceable.*
 
-3. **ED time fell by 111 minutes — a 38% reduction.** A drop this large across seven years is plausible but unusual, and may partly reflect a change in the CMS measure definition, reporting protocol, or coding of "Not Available" cells across the two vintages. The CMS measure documentation should be checked before the magnitude is reported as a real operational gain.
+3. **ED time fell by 111 minutes — a 38% reduction.** A drop this large across seven years is plausible but unusual, and may partly reflect a change in the CMS measure definition, reporting protocol, or coding of "Not Available" cells across the two vintages. Per analyst review (2026-05-22), this is a **potentially fundamental** caveat for the ED interpretation in the manuscript and is **blocking** for any prose that reports the 111-minute drop as a real operational gain. Validation requires two checks: (a) compare the OP-18b specification (median ED arrival-to-departure time, all patients) across the 2017 and 2024 vintages of the CMS Hospital Outpatient Quality Reporting (OQR) Program Specifications Manual, with particular attention to the FY2021 IPPS Final Rule (85 FR 58432) which changed several OQR measures; and (b) cross-check against the published ED-throughput literature (e.g., Mostafa & El-Atawi 2024) for whether a comparable national drop is corroborated. Results of those checks should be added to the manuscript Methods or limitations before the ED finding is drafted.
 
 4. **The % White mean fell by 10.7 percentage points and median household income rose by $12,800.** Both shifts are large relative to typical seven-year ACS movement and may reflect a tabulation change (e.g., ACS race-category recoding around the 2020 vintage) or a real-vs-nominal-dollars issue (the income series may not be deflator-adjusted). Both should be verified before the descriptive sentences are drafted.
 

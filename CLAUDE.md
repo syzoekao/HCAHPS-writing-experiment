@@ -8,7 +8,7 @@ This is a health economics research project studying HCAHPS (Hospital Consumer A
 
 **Manuscript title (working, per analyst):** *Determinants of Hospital HCAHPS Star Ratings and Changes Over Time, 2017-2024*.
 
-The central quantitative finding — and the paper's key contribution — is a **levels-vs-change asymmetry**: observable hospital, operational, and community factors explain ~24% of cross-sectional variation in star ratings but <6% of trajectory variation (2017→2024 change).
+The central quantitative finding — and the paper's key contribution — is a **levels-vs-change asymmetry**: many hospital, operational, and community factors are associated with where star ratings stand in any given year, but almost none of those same factors are associated with the 2017→2024 change. (The matching share-of-variation contrast — roughly 24% in the cross-sectional models and 4–6% in the change model — is supporting evidence, not the headline framing. Per analyst direction 2026-05-22.)
 
 ## Repository layout
 

@@ -20,7 +20,7 @@ citation-style: ama         # ama | vancouver | apa | jama | nejm | ...
 # Word and count budgets (if known)
 word-limit:
   abstract: 180             # journal abstract, e.g., 250
-  main-text: 3500            # e.g., 3500
+  main-text: 3000            # tightened from AJPH 3,500 cap per analyst direction 2026-05-22
   specific-aims: TBD        # for grants (usually ~1 page)
 
 # Conference-specific (fill in when artifact-type is conference-abstract; delete otherwise)
@@ -72,21 +72,21 @@ U.S. acute-care hospitals reporting HCAHPS in both the Q1 2017 release wave and 
 
 ## Primary method
 
-Hospital-level OLS with heteroskedasticity-robust standard errors. Three linked specifications: (1) **levels** of the overall HCAHPS star rating in 2017, (2) **levels** in 2024, and (3) **first-differenced change** (2024 − 2017), each regressed on hospital characteristics (ownership, rurality), operations (ED time-in-department, hospitals per 1,000 population), and county-level community covariates (age, race/ethnicity, foreign-born share, education, poverty, income, self-reported poor health). R² comparison across specifications is the central quantitative contrast. No causal identification; framing is associational and decomposition-based.
+Hospital-level OLS with heteroskedasticity-robust standard errors. Three linked specifications: (1) **levels** of the overall HCAHPS star rating in 2017, (2) **levels** in 2024, and (3) **first-differenced change** (2024 − 2017), each regressed on hospital characteristics (ownership, rurality), operations (ED time-in-department, hospitals per 1,000 population), and county-level community covariates (age, race/ethnicity, foreign-born share, education, poverty, income, self-reported poor health). The central quantitative contrast is the **significance pattern** — which factors are associated with rating levels but not with rating change — rather than the matching R² gap (analyst direction, 2026-05-22). No causal identification; framing is associational and decomposition-based.
 
 ## Key findings
 
 - **National decline**: mean overall star rating 3.45 (2017) → 3.27 (2024), a drop of ≈0.18 stars.
 - **ED throughput improved**: median time in ED 292 → 181 minutes.
-- **Levels models explain ~24% of variation** in 2017 and again in 2024 — a stable cross-sectional pattern.
-- **Change model explains <6%** of trajectory variation with the same covariates — the levels-vs-change asymmetry.
+- **Most factors are significantly associated with rating levels** in both 2017 and 2024 — and the cross-sectional pattern is stable across the two years.
+- **Almost no factor is significantly associated with rating change** with the same covariates — this is the levels-vs-change asymmetry; the matching share-of-variation contrast (≈24% in levels, 4–6% in change) is supporting, not the headline.
 - **Levels (consistent 2017 and 2024)**: government ownership > non-profit > for-profit; small rural hospitals score highest; longer ED time and higher % 65+, % foreign-born, % poor associate with lower ratings; higher % bachelor's+ associates with higher.
 - **Change predictors**: rural hospitals gained relative to urban (large rural +0.20, small rural +0.28); non-profit −0.11 and for-profit −0.13 vs government; ED time reduction associated with small rating gains; almost no community-change variable reaches significance.
 - **Headline interpretation**: levels are environment-driven (bad news for incentive programs that pay on ratings); change is operations-driven (good news for hospital agency — modest but real levers exist).
 
 ## Audience
 
-Public health researchers, health services researchers, and policy audiences interested in patient experience as a quality measure and in the fairness of payment-linked hospital ratings. Audience tilts more toward public health and academic policy than toward the clinical/payer audience that Health Affairs primarily reaches — voice should be readable but methodologically explicit (regression coefficients, R² contrasts shown plainly). Avoid clinical jargon; explain CMS Star Ratings briefly.
+Public health researchers, health services researchers, and policy audiences interested in patient experience as a quality measure and in the fairness of payment-linked hospital ratings. Audience tilts more toward public health and academic policy than toward the clinical/payer audience that Health Affairs primarily reaches — voice should be readable but methodologically explicit (regression coefficients and the significance pattern shown plainly; R² reported but not foregrounded). Avoid clinical jargon; explain CMS Star Ratings briefly.
 
 ## Sources
 

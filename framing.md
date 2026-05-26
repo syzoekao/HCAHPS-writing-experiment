@@ -4,7 +4,7 @@
 **Manuscript title (working, per analyst):** *Determinants of Hospital HCAHPS Star Ratings and Changes Over Time, 2017-2024*
 **Date:** 2026-05-16 (updated after analyst review of 2026-05-01 draft)
 **Target journal:** American Journal of Public Health (AJPH; primary); Health Affairs, JAMA Health Forum, and Health Affairs Scholar as alternates
-**Word budget:** 3,500 words main text; 180 words abstract (per AJPH Original Research guidelines)
+**Word budget:** ~3,000 words main text (tightened from the AJPH Original Research cap of 3,500 per analyst direction 2026-05-22); 180-word abstract
 
 ---
 
@@ -27,13 +27,16 @@ This dual reading is the analyst's framing and replaces the earlier single-messa
 - **Sample**: N = 2,380 hospitals (66.5% for-profit, 18.7% non-profit, 14.8% government; 69.5% urban, 20.8% large rural, 9.7% small rural).
 
 ### Two regression stories
-| Model | Variation explained | What it tells us |
-|---|---|---|
-| 2017 levels | ≈24% | Hospital and community factors explain about a quarter of cross-sectional variation |
-| 2024 levels | ≈24% | Same magnitude as 2017 — pattern is stable |
-| **2017→2024 change** | **4–6%** | Same covariates explain almost nothing about *trajectories* |
 
-This **levels-vs-change asymmetry** is the single most important quantitative finding.
+The central contrast is the **significance pattern** across specifications — in 2017 and 2024 most hospital, operational, and community factors are significantly associated with the rating; in the 2017→2024 change model, almost none of those same factors are significant. The matching share-of-variation gap (below) is supporting evidence for the asymmetry, not the headline.
+
+| Model | Significance pattern | Share of variation explained |
+|---|---|---|
+| 2017 levels | Most factors significant | ≈24% |
+| 2024 levels | Most factors significant; pattern stable vs 2017 | ≈24% |
+| **2017→2024 change** | **Almost nothing significant except Δ ED time** | **4–6%** |
+
+This **levels-vs-change asymmetry** is the single most important quantitative finding (analyst direction 2026-05-22: lead with the significance pattern, not the R² gap).
 
 ### Levels — what predicts higher ratings (consistent across 2017 and 2024)
 - **Ownership** (vs government): non-profit −0.58 stars (2024), for-profit −0.11 (2024). Government is the highest-scoring category.
