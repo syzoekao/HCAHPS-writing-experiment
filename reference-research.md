@@ -597,24 +597,24 @@ Pass 3 surveyed the last 24 months of PubMed for newer / more canonical replacem
 
 The `[@TBD-reputation-citation]` slot is in outline ¶1, attached to the reputational-stake bullet: *"because Care Compare publishes the star ratings on a consumer-facing site, ratings also feed prospective patients' hospital-choice decisions and the hospital's reputation independent of any payment formula."* Per Part 2 instructions, three candidates are queued; none is unambiguously canonical, so none is auto-imported.
 
-#### R1. Pope 2009 (Journal of Health Economics) — consumer response to hospital quality information
+#### R1. Pope 2009 (Journal of Health Economics) — consumer response to hospital quality information — **SELECTED 2026-05-28**
 
 - **Title:** Reacting to rankings: Evidence from "America's Best Hospitals"
-- **Author:** Devin G. Pope
-- **Journal:** *J Health Econ.* 2009;28(6):1154-1165. PDF: https://devingpope.com/assets/files/Website_Hospitals.pdf
+- **Author:** Devin G. Pope (single author)
+- **Journal:** *J Health Econ.* 2009;28(6):1154-1165. DOI: 10.1016/j.jhealeco.2009.08.006 (CrossRef-verified 2026-05-28). PDF: https://devingpope.com/assets/files/Website_Hospitals.pdf
+- **Status:** Selected by analyst on 2026-05-28 as the ¶1 reputational-stake anchor (paired with R2 Gutacker as a supporting anchor). Imported to Zotero on 2026-05-28 and present in `manuscript/HCAHPS.bib` with key `@popeReactingRankingsEvidence2009` (BBT output matched the prediction).
 - **Why a fit:** Pope 2009 is the canonical economics paper on the demand-side response of patients to publicly disclosed hospital quality information (specifically the *U.S. News & World Report* "Best Hospitals" rankings). The mechanism — published quality information shifts patient hospital choice — is exactly the reputation channel the outline ¶1 bullet asserts.
-- **Why not auto-imported:** The paper is about *U.S. News* rankings rather than CMS Care Compare star ratings; the analogy is strong but not exact.
-- **Suggested key:** `@popeReactingRankings2009` (to assign on import).
+- **Caveat to manage in prose:** The paper is about *U.S. News* rankings rather than CMS Care Compare star ratings; the mechanism is the same but the venue differs. Frame the ¶1 citation as exemplifying the demand-side response mechanism, not as direct evidence about Care Compare.
 
-#### R2. Gutacker et al. 2016 (Journal of Health Economics) — choice of hospital and which quality matters
+#### R2. Gutacker et al. 2016 (Journal of Health Economics) — choice of hospital and which quality matters — **SELECTED 2026-05-28 (supporting anchor)**
 
 - **Title:** Choice of hospital: Which type of quality matters?
 - **Authors:** Nils Gutacker, Luigi Siciliani, Giuseppe Moscelli, Hugh Gravelle
 - **Journal:** *J Health Econ.* 2016;50:230-246. doi:10.1016/j.jhealeco.2016.10.001. PMC5138156 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5138156/).
+- **Status:** Selected by analyst on 2026-05-28 as a supporting anchor for outline ¶1 alongside Pope 2009. Pope carries the demand-side-response argument; Gutacker complements with evidence on which quality dimensions enter hospital choice. Imported to Zotero on 2026-05-28 and present in `manuscript/HCAHPS.bib` with key `@gutackerChoiceHospitalWhich2016` (BBT kept "Which" as a significant word, contrary to the earlier prediction of `gutackerChoiceHospitalType2016` — outline remapped accordingly).
 - **Correction note (2026-05-28):** The earlier draft of this entry attributed the paper to "Wang J, Hockenberry J, Chou S-Y, Yang M" with vol 48, pp 121-130 — *both the authorship and the volume/pages were wrong*. The PMC ID was correct. The fabricated attribution is a flag that other auto-search-derived entries in this notebook should be spot-checked before import. Analyst caught the error.
-- **Why a fit:** Estimates multinomial-logit hospital-choice models among English NHS patients undergoing hip replacement, testing whether patient-reported health gains (an experience-adjacent outcome) drive demand. Speaks to the more general "which type of publicly reported quality enters hospital choice" question.
-- **Why not auto-imported:** UK NHS hip-replacement choice setting — not US Care Compare and not HCAHPS-specific. The analogy to the outline ¶1 reputational-stake bullet is weaker than the original (incorrect) US-attribution implied.
-- **Suggested key:** `@gutackerChoiceHospitalQuality2016` (to assign on import).
+- **Why a fit:** Estimates multinomial-logit hospital-choice models among English NHS patients undergoing hip replacement, testing whether patient-reported health gains (an experience-adjacent outcome) drive demand. Speaks to the more general "which type of publicly reported quality enters hospital choice" question — the natural companion to Pope's demand-side argument.
+- **Caveat to manage in prose:** UK NHS hip-replacement choice setting — not US Care Compare and not HCAHPS-specific. Frame the ¶1 citation as evidence on the *mechanism* (patients respond to specific quality dimensions), not as US-setting evidence on Care Compare ratings specifically.
 
 #### R3. Hu & Nerenz 2021 (Am J Manag Care) — properties of overall hospital star ratings and consumer choice
 
@@ -626,7 +626,17 @@ The `[@TBD-reputation-citation]` slot is in outline ¶1, attached to the reputat
 - **Why not auto-imported:** Citation details needed analyst verification (now resolved); analyst should still choose whether to anchor ¶1 on Pope 2009, Hu & Nerenz 2021, or Austin et al. 2015.
 - **Suggested key:** `@huPropertiesOverallHospital2021` (to assign on import).
 
-**Recommendation for the drafter:** Pope 2009 is the strongest single-anchor option (canonical economics paper on the mechanism); Hu & Nerenz 2021 is the strongest CMS-star-specific anchor; Gutacker et al. 2016 is a useful international-comparison alternative; Austin et al. 2015 (Health Affairs) is the strongest rating-systems-agreement alternative. Analyst's call which to import.
+**Resolution 2026-05-28:** Analyst selected R1 (Pope 2009) as the primary ¶1 reputational-stake anchor and R2 (Gutacker et al. 2016) as a supporting anchor. R3 (Hu & Nerenz) and the Austin et al. 2015 alternative not selected — kept in this notebook for traceability and as fallback options if a peer reviewer requests a CMS-star-specific or US-setting citation.
+
+#### R4. Chakraborty & Church 2020 (Journal of Health Organization and Management) — Yelp ratings predict HCAHPS scores — **analyst-suggested 2026-05-28**
+
+- **Title:** Social media hospital ratings and HCAHPS survey scores
+- **Authors:** Subhajit Chakraborty, E. Mitchell Church
+- **Journal:** *J Health Organ Manag.* 2020;34(2):162-172. DOI: 10.1108/JHOM-08-2019-0234 (Emerald-verified 2026-05-28). https://www.emerald.com/jhom/article-abstract/34/2/162/220185/Social-media-hospital-ratings-and-HCAHPS-survey
+- **What the paper does:** OLS and ordinal regressions on 2016 Hospital Compare + Yelp data. Finds Yelp patient satisfaction ratings predict HCAHPS patient-experience domain scores and correlate with CMS overall hospital quality performance scores.
+- **Fit assessment for ¶1 reputational-stake bullet:** Weaker fit than Pope 2009. The bullet asserts that *publicly reported ratings shift patient hospital choice and shape reputation*. Chakraborty & Church argues a different claim — that *Yelp ratings carry information equivalent to HCAHPS* (cross-validation), not that Care Compare ratings drive reputation/demand. Not recommended as a second anchor for ¶1.
+- **Where this paper could fit instead:** (a) Discussion sentence about HCAHPS scores having external validity in broader online review ecosystems; (b) ¶21 (Limitations) or a methodology footnote on HCAHPS construct validity / external concordance; (c) potential anchor if the manuscript adds a paragraph on real-world reputational consequences of HCAHPS beyond the CMS publication.
+- **Status:** Imported to Zotero on 2026-05-28; present in `manuscript/HCAHPS.bib` with key `@chakrabortySocialMediaHospital2020`. Not yet cited in outline — available for Discussion-section use if a HCAHPS-external-validity anchor is wanted at drafting time.
 
 ### Removed TBD marker (no clean literature anchor)
 
