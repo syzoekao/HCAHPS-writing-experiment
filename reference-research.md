@@ -463,10 +463,10 @@ This block records candidates produced by the three-pass reference workflow run 
 
 These four references were auto-imported under the canonical-or-DOI-exact-match rule; they appear in `HCAHPS.bib` under the keys below.
 
-- `@cassidySmithDisconfirmationParadigm2007` — Cassidy-Smith TN, Baumann BM, Boudreaux ED. The disconfirmation paradigm: throughput times and emergency department patient satisfaction. *J Emerg Med.* 2007;32(1):7-13. doi:10.1016/j.jemermed.2006.05.028. Resolved from outline TBD marker `[@TBD-cassidy-smith-disconfirmation-2007]`.
+- `@cassidy-smithDisconfirmationParadigmThroughput2007` — Cassidy-Smith TN, Baumann BM, Boudreaux ED. The disconfirmation paradigm: throughput times and emergency department patient satisfaction. *J Emerg Med.* 2007;32(1):7-13. doi:10.1016/j.jemermed.2006.05.028. Resolved from outline TBD marker `[@TBD-cassidy-smith-disconfirmation-2007]`.
 - `@westreichTable2Fallacy2013` — Westreich D, Greenland S. The Table 2 fallacy: presenting and interpreting confounder and modifier coefficients. *Am J Epidemiol.* 2013;177(4):292-298. doi:10.1093/aje/kws412. Canonical reference for the concept; resolved from outline TBD marker `[@TBD-westreich-greenland-table2-2013]`.
-- `@cmsHospitalOQRSpecsManual` — CMS Hospital Outpatient Quality Reporting (OQR) Program Specifications Manual. QualityNet. https://qualitynet.cms.gov/outpatient/specifications-manuals. Used in the ED measure-definition validation (`findings.md §9`).
-- `@fedreg85FR58432_FY2021IPPSFinalRule` — FY 2021 IPPS/LTCH PPS Final Rule (CMS-1735-F), 85 Fed. Reg. 58432 (September 18, 2020). https://www.federalregister.gov/documents/2020/09/18/2020-19637/. Used in the ED measure-definition validation as the rule the analyst flagged for potential OP-18 changes (refuted — this is the IQR rule, not the OQR rule).
+- `@HttpsQualitynetcmsgovOutpatient` — CMS Hospital Outpatient Quality Reporting (OQR) Program Specifications Manual. QualityNet. https://qualitynet.cms.gov/outpatient/specifications-manuals. Used in the ED measure-definition validation (`findings.md §9`).
+- `@HttpsWwwfederalregistergovDocuments` — FY 2021 IPPS/LTCH PPS Final Rule (CMS-1735-F), 85 Fed. Reg. 58432 (September 18, 2020). https://www.federalregister.gov/documents/2020/09/18/2020-19637/. Used in the ED measure-definition validation as the rule the analyst flagged for potential OP-18 changes (refuted — this is the IQR rule, not the OQR rule).
 
 ### Pass 1 queued — bib entries to add (12 items, none meeting the auto-import threshold)
 
@@ -477,7 +477,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Title:** Patient Protection and Affordable Care Act, §3001 — Hospital Value-Based Purchasing Program
 - **Citation:** Pub. L. No. 111-148, §3001, 124 Stat. 119, 353-67 (2010), codified at 42 U.S.C. §1395ww(o).
 - **Outline use:** ¶1, paired with Werner & Dudley 2012, for the financial-stake bullet.
-- **Suggested key:** `@aca2010Sec3001HVBP` (matches outline).
+- **Suggested key:** `@HttpsWwwcongressgovBill` (matches outline).
 - **Notes:** Statutory citation; recommend a `@misc` or `@statute` entry. No DOI.
 
 #### Q2. Werner & Dudley 2012 (HVBP small-impact analysis)
@@ -487,7 +487,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Journal:** *Health Affairs (Millwood).* 2012;31(9):1932-1940.
 - **DOI:** 10.1377/hlthaff.2011.0990 (PMID:22949441)
 - **Outline use:** ¶1, financial-stake bullet (canonical HVBP-impact reference).
-- **Suggested key:** `@wernerMedicareNewHospital2012` (matches outline).
+- **Suggested key:** `@wernerMedicaresNewHospital2012` (matches outline).
 
 #### Q3. Bleustein et al. 2014 (wait time → patient satisfaction)
 
@@ -505,7 +505,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Journal:** *J Emerg Med.* 2011;41(6):686-692.
 - **DOI:** 10.1016/j.jemermed.2011.01.018 (PMID:21440402)
 - **Outline use:** ¶19, ED-throughput-to-satisfaction trio. Pass 2 also recommended adding this to ¶15 as a direct rating-association reference.
-- **Suggested key:** `@soremekunFrameworkWaitTimes2011` (matches outline).
+- **Suggested key:** `@soremekunFrameworkAnalyzingWait2011` (matches outline).
 
 #### Q5. Greenlund et al. 2022 (PLACES Local Data for Better Health)
 
@@ -523,7 +523,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Publisher:** Minneapolis, MN: IPUMS; 2024.
 - **DOI:** 10.18128/D050.V19.0
 - **Outline use:** ¶5, data-sources paragraph; canonical IPUMS NHGIS citation.
-- **Suggested key:** `@mansonIPUMSNHGIS2024` (matches outline). Recommend a `@misc` or `@dataset` entry.
+- **Suggested key:** `@mansonNationalHistoricalGeographic2024` (matches outline). Recommend a `@misc` or `@dataset` entry.
 
 #### Q7. USDA ERS Rural-Urban Commuting Area Codes (2020 census revision, 2023 release)
 
@@ -531,7 +531,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Author:** U.S. Department of Agriculture, Economic Research Service
 - **URL:** https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/
 - **Outline use:** ¶5, data-sources paragraph (rural-urban classification).
-- **Suggested key:** `@usdaERSRUCACodes2023` (matches outline). Recommend a `@misc` entry; note the underlying data are based on the 2020 decennial census with revisions released in 2023–2025.
+- **Suggested key:** `@HttpsWwwersusdagovDataproducts` (matches outline). Recommend a `@misc` entry; note the underlying data are based on the 2020 decennial census with revisions released in 2023–2025.
 
 #### Q8. WWAMI Rural Health Research Center RUCA documentation
 
@@ -539,7 +539,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Author:** University of Washington WWAMI Rural Health Research Center
 - **URL:** https://depts.washington.edu/uwruca/
 - **Outline use:** ¶5, data-sources paragraph (the analyst's three-class urban / large-rural / small-rural recode follows WWAMI conventions).
-- **Suggested key:** `@wwamiRUCAClassification` (matches outline). Recommend a `@misc` entry.
+- **Suggested key:** `@HttpsDeptswashingtoneduUwruca` (matches outline). Recommend a `@misc` entry.
 
 #### Q9. CMS HCAHPS — Patients' Perspectives of Care Survey
 
@@ -547,23 +547,15 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Author:** Centers for Medicare & Medicaid Services
 - **URL:** https://www.hcahpsonline.org/
 - **Outline use:** ¶1 and ¶5, HCAHPS programmatic reference.
-- **Suggested key:** `@cmsHCAHPSPatientsPerspectives` (matches outline). Recommend a `@misc` entry.
+- **Suggested key:** `@HttpsWwwhcahpsonlineorg` (matches outline). Recommend a `@misc` entry.
 
-#### Q10. CMS HCAHPS Star Ratings Technical Notes (2024)
+#### Q10. CMS HCAHPS Star Ratings Technical Notes (2024) — **REMOVED 2026-05-28**
 
-- **Title:** HCAHPS Star Ratings Technical Notes
-- **Author:** Centers for Medicare & Medicaid Services / Health Services Advisory Group
-- **URL:** https://www.hcahpsonline.org/globalassets/hcahps/star-ratings/tech-notes/
-- **Outline use:** ¶5, methods data-sources paragraph (rating construction).
-- **Suggested key:** `@cmsHCAHPSStarRatingsTechNotes2024` (matches outline). Recommend a `@misc` entry with the most recent stable URL.
+- **Status:** Removed from Zotero and dropped from outline ¶5 on 2026-05-28. The URL `https://www.hcahpsonline.org/globalassets/hcahps/star-ratings/tech-notes/` did not resolve to the intended page during analyst review; CMS appears to have reorganized the Tech Notes content under a different path. Methodology coverage in outline ¶5 is now anchored to the two remaining CMS citations (`@HttpsWwwhcahpsonlineorg`, `@HttpsWwwmedicaregovCarecompare`). If a Tech Notes citation is needed at drafting time, locate the current stable URL first and re-add to Zotero.
 
-#### Q11. CMS Healthcare Cost Report Information System (HCRIS)
+#### Q11. CMS Healthcare Cost Report Information System (HCRIS) — **REMOVED 2026-05-28**
 
-- **Title:** Healthcare Cost Report Information System (HCRIS)
-- **Author:** Centers for Medicare & Medicaid Services
-- **URL:** https://www.cms.gov/medicare/medicare-fee-for-service-payment/acuteinpatientpps/hospital-2010-cost-report
-- **Outline use:** ¶5, data-sources paragraph (nurse salary, bed count).
-- **Suggested key:** `@cmsHCRIS` (matches outline). Recommend a `@misc` entry.
+- **Status:** Removed from Zotero and dropped from outline ¶5 on 2026-05-28. The URL `https://www.cms.gov/medicare/medicare-fee-for-service-payment/acuteinpatientpps/hospital-2010-cost-report` did not resolve to the intended page during analyst review (this is also the CMS HCRIS page the citation audit could not verify on 2026-05-28; see `manuscript/citation-audit.md`). Outline ¶5 now mentions HCRIS as the source for nurse salary and bed count without a parenthetical citation. If a HCRIS citation is needed at drafting time, locate the current stable URL (likely under `data.cms.gov` or the CMS HCRIS data files page) and re-add to Zotero.
 
 #### Q12. CMS Hospital Care Compare
 
@@ -571,7 +563,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Author:** Centers for Medicare & Medicaid Services
 - **URL:** https://www.medicare.gov/care-compare/
 - **Outline use:** ¶1, ¶5, programmatic reference to the consumer-facing Care Compare site.
-- **Suggested key:** `@cmsHospitalCareCompare` (matches outline). Recommend a `@misc` entry.
+- **Suggested key:** `@HttpsWwwmedicaregovCarecompare` (matches outline). Recommend a `@misc` entry.
 
 #### Q13. CMS Provider of Services File
 
@@ -579,7 +571,7 @@ These references are cited in `outline.md` but are not yet in `HCAHPS.bib`. None
 - **Author:** Centers for Medicare & Medicaid Services
 - **URL:** https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-hospital-non-hospital-facilities
 - **Outline use:** ¶5, data-sources paragraph (hospitals-per-1,000-population covariate).
-- **Suggested key:** `@cmsProviderOfServicesFile` (matches outline). Recommend a `@misc` entry.
+- **Suggested key:** `@HttpsDatacmsgovProvidercharacteristics` (matches outline). Recommend a `@misc` entry.
 
 ### Pass 1 queued — bib-key renames (4 items)
 
@@ -614,24 +606,27 @@ The `[@TBD-reputation-citation]` slot is in outline ¶1, attached to the reputat
 - **Why not auto-imported:** The paper is about *U.S. News* rankings rather than CMS Care Compare star ratings; the analogy is strong but not exact.
 - **Suggested key:** `@popeReactingRankings2009` (to assign on import).
 
-#### R2. Wang et al. 2016 (Journal of Health Economics) — choice of hospital and which quality matters
+#### R2. Gutacker et al. 2016 (Journal of Health Economics) — choice of hospital and which quality matters
 
 - **Title:** Choice of hospital: Which type of quality matters?
-- **Authors:** Wang J, Hockenberry J, Chou S-Y, Yang M
-- **Journal:** *J Health Econ.* 2016;48:121-130. doi:10.1016/j.jhealeco.2016.04.005. PMC5138156 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5138156/).
-- **Why a fit:** Examines what types of publicly reported quality information (process, outcome, patient-experience) drive hospital choice. Directly speaks to whether HCAHPS-type patient-experience information enters hospital-choice decisions.
-- **Why not auto-imported:** Not specific to Care Compare star ratings.
-- **Suggested key:** `@wangChoiceHospitalQuality2016` (to assign on import).
+- **Authors:** Nils Gutacker, Luigi Siciliani, Giuseppe Moscelli, Hugh Gravelle
+- **Journal:** *J Health Econ.* 2016;50:230-246. doi:10.1016/j.jhealeco.2016.10.001. PMC5138156 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5138156/).
+- **Correction note (2026-05-28):** The earlier draft of this entry attributed the paper to "Wang J, Hockenberry J, Chou S-Y, Yang M" with vol 48, pp 121-130 — *both the authorship and the volume/pages were wrong*. The PMC ID was correct. The fabricated attribution is a flag that other auto-search-derived entries in this notebook should be spot-checked before import. Analyst caught the error.
+- **Why a fit:** Estimates multinomial-logit hospital-choice models among English NHS patients undergoing hip replacement, testing whether patient-reported health gains (an experience-adjacent outcome) drive demand. Speaks to the more general "which type of publicly reported quality enters hospital choice" question.
+- **Why not auto-imported:** UK NHS hip-replacement choice setting — not US Care Compare and not HCAHPS-specific. The analogy to the outline ¶1 reputational-stake bullet is weaker than the original (incorrect) US-attribution implied.
+- **Suggested key:** `@gutackerChoiceHospitalQuality2016` (to assign on import).
 
-#### R3. Wang et al. 2015 (Health Affairs / AJMC) — properties of overall hospital star ratings and consumer choice
+#### R3. Hu & Nerenz 2021 (Am J Manag Care) — properties of overall hospital star ratings and consumer choice
 
 - **Title:** Properties of the Overall Hospital Star Ratings and Consumer Choice
-- **Source:** *Am J Manag Care* commentary / Health Affairs blog discussion of the CMS star ratings' consumer-choice properties; one indexed article: AJMC https://www.ajmc.com/view/properties-of-the-overall-hospital-star-ratings-and-consumer-choice. There is also a 2015 *Health Affairs* paper by Austin et al. comparing hospital quality rating systems' limited agreement (https://www.healthaffairs.org/doi/10.1377/hlthaff.2014.0824).
-- **Why a fit:** Directly addresses CMS star-rating consumer-use properties — the closest match to the outline ¶1 claim if a CMS-star-specific citation is preferred over the more general Pope 2009.
-- **Why not auto-imported:** AJMC commentary is less canonical than a peer-reviewed economics paper; full citation needs analyst verification.
-- **Suggested key:** TBD (to assign on import). Analyst should pick between the AJMC commentary and the Austin 2015 *Health Affairs* paper based on argumentative weight.
+- **Authors:** Jianhui Hu, David R. Nerenz
+- **Journal:** *Am J Manag Care.* 2021;27(5):203-210. PMID 34002962 (https://pubmed.ncbi.nlm.nih.gov/34002962/). AJMC: https://www.ajmc.com/view/properties-of-the-overall-hospital-star-ratings-and-consumer-choice
+- **Correction note (2026-05-28):** The earlier draft of this entry mis-dated this paper to 2015 and attributed it to "Wang et al." — *both wrong*. The actual paper is Hu & Nerenz 2021. (The 2015 Austin et al. Health Affairs paper on rating-system agreement, https://www.healthaffairs.org/doi/10.1377/hlthaff.2014.0824, is a separate piece and is still a reasonable alternative anchor for the ¶1 claim if a 2015-vintage citation is preferred.) Analyst caught the error.
+- **Why a fit:** Directly examines CMS Overall Hospital Quality Star Ratings as a consumer-choice tool — finds clustering in the middle and limited predictive value for condition-specific quality. The closest CMS-star-specific match for the outline ¶1 reputational-stake claim.
+- **Why not auto-imported:** Citation details needed analyst verification (now resolved); analyst should still choose whether to anchor ¶1 on Pope 2009, Hu & Nerenz 2021, or Austin et al. 2015.
+- **Suggested key:** `@huPropertiesOverallHospital2021` (to assign on import).
 
-**Recommendation for the drafter:** Pope 2009 is the strongest single-anchor option (canonical economics paper on the mechanism); Wang 2016 is the strongest HCAHPS-adjacent alternative; the AJMC commentary / Austin 2015 is the strongest CMS-star-specific option. Analyst's call which to import.
+**Recommendation for the drafter:** Pope 2009 is the strongest single-anchor option (canonical economics paper on the mechanism); Hu & Nerenz 2021 is the strongest CMS-star-specific anchor; Gutacker et al. 2016 is a useful international-comparison alternative; Austin et al. 2015 (Health Affairs) is the strongest rating-systems-agreement alternative. Analyst's call which to import.
 
 ### Removed TBD marker (no clean literature anchor)
 

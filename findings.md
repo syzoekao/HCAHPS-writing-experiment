@@ -204,8 +204,8 @@ What this means for the manuscript:
 
 ### 9.5 References cited in this validation
 
-- CMS Hospital OQR Specifications Manual archive (versions v10.0 through v19.0). QualityNet. https://qualitynet.cms.gov/outpatient/specifications-manuals. Citation key: `@cmsHospitalOQRSpecsManual`.
-- 85 FR 58432, Fiscal Year 2021 Medicare Hospital Inpatient Prospective Payment Systems Final Rule (CMS-1735-F). Federal Register, September 18, 2020. https://www.federalregister.gov/documents/2020/09/18/2020-19637/. Citation key: `@fedreg85FR58432_FY2021IPPSFinalRule`.
+- CMS Hospital OQR Specifications Manual archive (versions v10.0 through v19.0). QualityNet. https://qualitynet.cms.gov/outpatient/specifications-manuals. Citation key: `@HttpsQualitynetcmsgovOutpatient`.
+- 85 FR 58432, Fiscal Year 2021 Medicare Hospital Inpatient Prospective Payment Systems Final Rule (CMS-1735-F). Federal Register, September 18, 2020. https://www.federalregister.gov/documents/2020/09/18/2020-19637/. Citation key: `@HttpsWwwfederalregistergovDocuments`.
 - CY 2021 OPPS/ASC Final Rule (CMS-1736-FC), CMS fact sheet. https://www.cms.gov/newsroom/fact-sheets/cy-2021-medicare-hospital-outpatient-prospective-payment-system-and-ambulatory-surgical-center-0.
 - Emergency Department Benchmarking Alliance, 2023 performance report. https://www.beckershospitalreview.com/care-coordination/ed-length-of-stay-falls-in-2023-3-takeaways.html.
 - Mostafa R, El-Atawi K. Strategies to Measure and Improve Emergency Department Performance: A Review. *Cureus*. 2024;16(1):e52879. doi:10.7759/cureus.52879. Citation key: `@mostafaStrategiesMeasureImprove2024`.
