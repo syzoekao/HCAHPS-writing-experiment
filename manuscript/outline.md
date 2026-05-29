@@ -63,8 +63,8 @@
 ### ¶4 — Objective and approach
 
 - [core] Topic sentence: we examined which hospital, operational, and county community factors are associated with the overall HCAHPS star rating, and which of those factors explain the 2017→2024 change in rating.
-- [core] Design in one sentence: a hospital-level analysis comparing Q1 2017 with the most recent 2024 release wave, modeling rating levels in each year and the change between them.
-- [core] Year choice: the 2024 wave was selected both because it is the latest available and because it sits after the pandemic-era disruption — bracketing the pandemic period rather than analyzing it. The pandemic is not the focus of this study.
+- [support] Design: a hospital-level analysis comparing Q1 2017 with the most recent 2024 release wave, modeling rating levels in each year and the change between them.
+- [support] Year choice: the 2024 wave was selected both because it is the latest available and because it sits after the pandemic-era disruption — bracketing the pandemic period rather than analyzing it. The pandemic is not the focus of this study.
 - [core] Framing: the paper is associational and decomposition-based; it contrasts which factors are associated with the rating in each single year against which are associated with the 2017→2024 change, and makes no causal claim.
 - [support] No findings preview (AJPH convention).
 
