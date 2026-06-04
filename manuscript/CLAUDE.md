@@ -81,7 +81,7 @@ Hospital-level OLS with heteroskedasticity-robust standard errors. Three linked 
 - **Most factors are significantly associated with rating levels** in both 2017 and 2024 — and the cross-sectional pattern is stable across the two years.
 - **Almost no factor is significantly associated with rating change** with the same covariates — this is the levels-vs-change asymmetry; the matching share-of-variation contrast (≈24% in levels, 4–6% in change) is supporting, not the headline.
 - **Levels (consistent 2017 and 2024)**: government ownership > non-profit > for-profit; small rural hospitals score highest; longer ED time and higher % 65+, % foreign-born, % poor associate with lower ratings; higher % bachelor's+ associates with higher.
-- **Change predictors**: rural hospitals gained relative to urban (large rural +0.20, small rural +0.28); non-profit −0.11 and for-profit −0.13 vs government; ED time reduction associated with small rating gains; almost no community-change variable reaches significance.
+- **Change predictors** (baseline-controlled, Table 2 column 4 / `t6`): rural hospitals gained relative to urban (large rural +0.12, small rural +0.19); non-profit −0.11 and for-profit −0.13 vs government; ED time reduction associated with small rating gains; almost no community-change variable reaches significance. (Basic spec column 3 / `t5` gives the larger rural figures +0.20 / +0.28; the manuscript reports the column-4 baseline-controlled values.)
 - **Headline interpretation**: levels are environment-driven (bad news for incentive programs that pay on ratings); change is operations-driven (good news for hospital agency — modest but real levers exist).
 
 ## Audience

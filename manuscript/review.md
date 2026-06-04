@@ -1,63 +1,79 @@
-# Self-review — Methods
+# Self-review — whole draft (Methods + Results)
 
-Scope: Methods section (Data Sources and Study Sample ¶5; Measures ¶7–¶8; Statistical Analysis ¶9). Reviewed against `outline.md`, full `draft.md` for cross-section consistency, and `HCAHPS.bib`.
+Scope: full current draft — Methods (Data Sources and Study Sample, Measures, Statistical Analysis) and Results (Sample Characteristics and National Trends; Factors Associated with Rating Levels; Factors Associated with Rating Change). Introduction and Discussion are not yet drafted; forward-references to them are treated as expected, not defects. Reviewed against `outline.md`, the full `draft.md`, and `HCAHPS.bib`.
 
-Note on prior gates: the prose-reviser ran on this section — `<!-- DR-1 -->` and `<!-- DR-2 -->` markers are present in the draft. Per-section style was therefore not re-run here; this pass covers outline fidelity, cross-section consistency, citation integrity, logic/gaps, and word count.
+This replaces the prior Methods-only review. Earlier entries SR-1 through SR-5 (Methods-only pass) were resolved or made moot by subsequent analyst revisions and are not carried forward — see "Resolved since the prior review" below. Entry numbering restarts at SR-1 for this whole-draft pass.
+
+Prose-gate status: the current `draft.md` carries **no** `<!-- DR-N -->` markers and there is no `draft-revisions.md` in the manuscript folder. The prior review noted DR-1/DR-2 markers; they are absent now (the draft was re-revised since). This is the one sign that the per-section prose gate may not have run on the current text — see General observations. I did not re-run the per-section style pass; cross-section style only, per scope.
 
 ---
 
-## Data Sources and Study Sample (¶5)
+## Methods
 
-### SR-1 — outline-fidelity
-**Quote:** "...and had complete data, in both years, on every factor used in the models."
-**Issue:** The outline ¶5 core inclusion criterion reads "complete data, **in either year**, on every factor used in the models" (matching `[data: ../methods.md §3]`). The draft says "in **both** years." This is a STROBE inclusion/exclusion element, and "either" vs. "both" defines a materially different sample: "either year" admits a hospital missing a covariate in one year, "both years" requires completeness in each. The downstream N ≈ 2,380 and the change-model construction (¶8, which needs both years' values for each time-varying factor) depend on which rule is correct.
-**Suggestion:** Confirm against methods.md §3 / `sample==1` and align the draft to the authoritative criterion. Do not change without verifying — this is a substantive criterion, not wording. Flag only; deferred to author. (Preserve as a reporting-guideline element regardless.)
+### General observations — Methods
+- Acronym discipline is clean: HCAHPS, CMS, ED, CDC, ACS, NHGIS, RUCA, FIPS are each spelled out at first use in Methods and used in short form thereafter. None is re-expanded. Cross-section watch for when Intro/Discussion are drafted: HCAHPS and CMS will be first-used in the Introduction, so the Methods expansions must then become short-form back-references (the abbreviation's home moves to the Introduction).
+- The ED measure-scope caveat is correctly absent from Methods (Measures ¶7 states the ED measure plainly with no OP-18 detail, no comparability note, no forward-pointer), honoring the rule that ¶21 Limitations is its sole home.
+- "standard errors robust to heteroskedasticity" is the correct plain-language placement (Methods, once); "Huber-White"/"heteroskedasticity-robust" jargon is absent. Do not repeat this phrasing in Results (currently not repeated — good).
+- No causal/predictive verbs: the augmented model "test[s] whether the baseline rating **was associated with** the subsequent change" — associational framing held. No "predict," "drive," "shape," "cause" anywhere in Methods.
+- "county factors" terminology used throughout; "community" does not appear. "proportion" used throughout; "share" does not appear. Sample stated as exactly "2,380 hospitals" with no "approximately"/"≈".
+- Three cross-sectional/change models plus the augmented baseline model map to Table 2's four columns. The dropped subgroup and nurse-per-bed checks are correctly absent, and the nurse-salary/Cost-Report data-source clause (flagged in the prior Methods review as an orphan) has been removed from ¶5 — resolved.
+
+### SR-1 — methods-results
+**Quote:** "An augmented change model additionally controlled for the 2017 baseline rating, testing whether the baseline rating was associated with the subsequent change."
+**Issue:** Methods names a fourth analysis whose stated purpose is to test whether the 2017 baseline rating was associated with the subsequent change (a regression-toward-the-mean test). Results reports column-4 figures for the rural and ownership trajectory differences ("baseline-controlled"), so column 4 is used — but the analysis's own headline result, whether the baseline rating itself was associated with change, is never reported in Results. This is a methods→results orphan: the reader is told an association was tested but never told the answer. It is faithful to the outline (outline ¶9 describes the test; ¶12/¶16 do not report its result), so the gap traces to the outline, not drafter drift.
+**Suggestion:** Flag for the author — either report the baseline-rating association in Results ¶12 (one clause: direction and significance of the 2017-baseline term), or reframe the Methods sentence so the augmented model is described only as the baseline-controlled specification that yields the column-4 trajectory figures, without promising a baseline-rating test whose result does not appear. Do not add the missing result (not in the draft or a reported source); deferred to author.
+
+## Results
+
+### General observations — Results
+- Results discipline held: no inline citations, no literature comparison, no "central/key finding" narration or ranking, no interpretation of the poor-health positive sign (reported as direction only), no "population composition does not explain the shift" reading. Caveats are not introduced. All correct for AJPH Results.
+- The ED figures (292 → 181 minutes) and the within-hospital ED association (~0.002 stars per minute) are reported plainly with no comparability caveat and no conversion to a national-mean star gain — honoring the single-home rule and the "do not multiply by the mean drop" direction.
+- The between-year county shifts (population +2.4%, less White, more Hispanic/foreign-born/educated, income +~$12,800) are stated as observed numbers with no inference drawn — the sample-selection reading is correctly held for Limitations ¶21.
+- Figure 1 is called out (¶10) and Table 1 (¶10) and Table 2 (¶11 cols 1–2, ¶12 cols 3–4) are each cited. Every exhibit in the drafted scope is referenced.
+
+### Cross-section consistency — numbers (verified, no defects)
+- **N = 2,380**: Methods ¶5 "contained 2,380 hospitals"; Results ¶10 "included 2,380 hospitals." Consistent; no "approximately"/"≈" in either place. Matches outline.
+- **3.45 → 3.27 stars**: appears once (Results ¶10); matches outline and CLAUDE.md key findings.
+- **292 → 181 minutes (ED)**: appears once (Results ¶10); matches outline.
+- **~0.002 stars per minute (ED change association)**: Results ¶12; matches outline ¶12/¶140.
+- **Composition 66.5% / 18.7% / 14.8%; 69.5% / 20.8% / 9.7%**: Results ¶10; matches outline ¶10 and CLAUDE.md.
+- **$12,800 income rise**: Results ¶10; matches outline ¶10. (Limitations ¶21, not yet drafted, must reuse the same ~$12,800 figure — flag forward.)
 
 ### SR-2 — consistency
-**Quote:** "...the first-quarter 2017 release wave and the fourth-quarter 2024 release wave..."
-**Issue:** Wave labeling is internally consistent within Methods (first-quarter 2017; fourth-quarter 2024) and matches the outline's resolved convention (Open Questions #12f). No defect. Noted here only to record that the 2024 wave is labeled "fourth-quarter" in prose while the outline scaffolding elsewhere calls it the "October 2024 refresh / Q4" — the prose label is the correct one to carry into Results and Discussion when those sections are drafted. No change needed in Methods.
+**Quote:** "...rural hospitals gained more relative to urban hospitals — large rural by about 0.12 stars and small rural by about 0.19 stars..."
+**Issue:** Not a draft-internal inconsistency, but a divergence the author should be aware of before it surfaces in peer review. The draft uses the **baseline-controlled (Table 2 column 4)** rural-gain figures, +0.12 and +0.19, which match the outline's explicit instruction (outline ¶12: "Use the full model (Table 2 column 4, baseline-controlled) figures, consistent with the ED coefficient"). **CLAUDE.md "Key findings" lists +0.20 and +0.28** (the basic change-model figures). The draft is consistent with the authoritative outline and with the documented analyst direction to use column 4; CLAUDE.md is the stale source here, not the draft. No change to the draft.
+**Suggestion:** No draft edit. Note for the author: the same +0.12 / +0.19 (column 4) figures must be reused if the rural trajectory is restated in Discussion ¶19, and the CLAUDE.md key-findings bullet should be reconciled to column 4 at some point so the project record does not carry two rural-gain numbers. Flag only.
 
-### General observations — ¶5
-- The paragraph correctly omits the ED measure-scope caveat, per the analyst direction that ¶21 (Limitations) is its sole home (outline ¶7 note; Open Questions #2). Good.
-- All six citation keys in ¶5 resolve in `HCAHPS.bib` (`HttpsWwwhcahpsonlineorg`, `HttpsWwwmedicaregovCarecompare`, `HttpsQualitynetcmsgovOutpatient`, `greenlundPLACESLocalData2022`, `HttpsDatacmsgovProvidercharacteristics`, `mansonNationalHistoricalGeographic2024`, `HttpsWwwersusdagovDataproducts`, `HttpsDeptswashingtoneduUwruca`). No unresolved keys, no `[TBD]`, no `[@TBD-...]` placeholders.
-- The CMS Healthcare Cost Report Information System source for nurse salary and bed count carries no citation in either outline or draft. The outline ¶5 bullet also lists it without a key, so this is faithful to the outline — not a draft defect — but note that nurse salary/bed count do not appear as a modeled factor in ¶7–¶8 (see SR-3). Flag for the author: if this source contributes no measure that survives into the models, the sentence may be removable.
+---
 
-## Measures (¶7–¶8)
+## Citation integrity (whole drafted scope)
 
-### SR-3 — logic-gap / methods-results
-**Quote:** "...and nurse salary and bed count from the CMS Healthcare Cost Report Information System." (¶5) — read against ¶7–¶8.
-**Issue:** ¶5 lists nurse salary and bed count as assembled data, but neither appears among the modeled factors in ¶7 (hospital, operational, county community factors) or among the change measures in ¶8. The outline mirrors this (¶5 lists the cost-report source; ¶7/¶8 do not list nurse salary or beds as factors) — Open Questions #3/#12e record that the nurse-salary-per-bed sensitivity check was *dropped* because it is unverifiable and not reported in Results. So the analysis was intentionally removed, but the data-source sentence that fed it survives in ¶5.
-**Suggestion:** Flag for the author — consider dropping "and nurse salary and bed count from the CMS Healthcare Cost Report Information System" from ¶5, since no measure built from it enters any model. Leaving it implies a covariate the reader will look for in Table 2 and not find. Deferred (not auto-applied): removing a data-source clause is an author content decision, and it is faithful to the current outline.
+All eight citation keys in the draft resolve in `HCAHPS.bib`:
+`HttpsWwwhcahpsonlineorg`, `HttpsWwwmedicaregovCarecompare`, `HttpsQualitynetcmsgovOutpatient`, `greenlundPLACESLocalData2022`, `HttpsDatacmsgovProvidercharacteristics`, `mansonNationalHistoricalGeographic2024`, `HttpsWwwersusdagovDataproducts`, `HttpsDeptswashingtoneduUwruca`. No unresolved keys, no `[@... — NOT FOUND]` flags, no `[@TBD-...]` placeholders. All eight are in Methods; Results adds none (correct — AJPH Results carry no citations). The title-page `[TBD]` author/affiliation/corresponding-author fields are frontmatter, expected, tracked in outline Open Questions #10 — not modified.
 
-### SR-4 — consistency
-**Quote:** "...urban (RUCA 1–3), large rural or micropolitan (RUCA 4–6), and small or isolated rural (RUCA 7–10)."
-**Issue:** The draft writes "RUCA 4–6" and "RUCA 7–10" with the prefix repeated; the outline ¶7 writes "(RUCA 1–3)", "(4–6)", "(7–10)" with the prefix only on first mention. Minor and arguably an improvement (each range is self-labeled). No cross-section conflict since RUCA is defined once at first use in ¶5. No change needed; recorded for completeness.
+## Logic and gaps
+- The argument within the drafted scope is sound: Methods establishes the two snapshots, the factors, and the three-plus-one models; Results reports descriptives, the stable cross-sectional pattern, and the change asymmetry in that order. Each Results paragraph follows from a model described in Methods, with the one exception flagged in SR-1.
+- The levels-vs-change asymmetry — the paper's organizing contrast — is set up in Methods ¶9 (the central comparison sentence) and delivered in Results ¶12 ("In contrast to the broad set of factors associated with rating levels..."). The thread is intact without Intro/Discussion.
+- No unstated steps within the drafted scope. The interpretive load (why the asymmetry matters, the poor-health sign, the agency claim) is correctly deferred to the undrafted Discussion.
 
-### General observations — ¶7–¶8
-- ED is spelled out at first use ("emergency department (ED)") in ¶5 and used as "ED" consistently thereafter. RUCA, FIPS, ACS, NHGIS, CDC, CMS, HCAHPS all spelled out at first use in Methods. Acronym discipline is clean within the section. Cross-section note: when Results/Discussion are drafted, these must not be re-expanded (currently not a defect because only Methods exists).
-- ¶7 correctly states the ED measure plainly ("the median time a patient spent in the ED, in minutes") with no comparability caveat, per the outline note. Good.
-- ¶8 "fixed categorical factors" for ownership and rural-urban classification matches outline ¶8 support bullet. Faithful.
+## Caveat-echo (whole drafted scope)
+- No caveat is echoed. The ED measure-scope caveat appears nowhere in Methods or Results (its sole home is the undrafted Limitations ¶21). The sample-selection caveat appears nowhere in Results (deferred to ¶21). The single-home discipline is intact across the drafted sections. Re-run this pass once Discussion/Limitations exist to confirm ¶21 is the only home for both caveats and that no back-reference clause leaks into Results.
 
-## Statistical Analysis (¶9)
-
-### SR-5 — consistency
-**Quote:** "...testing whether the starting rating of a hospital predicted its subsequent trajectory."
-**Issue:** The draft uses "predicted." The outline ¶9 support bullet says the augmented model tests "whether a hospital's starting rating **shaped** its subsequent trajectory." This is a faithful softening, if anything (the skill's calibrated-certainty rule prefers "predicted/was associated with" over the vague causal "shaped" for an associational design). No defect — flagging only to note the draft chose the more defensible verb. No change needed. Cross-section watch: keep "predicted/associated," not "shaped/drove," when the change finding is restated in Results ¶12 and Discussion ¶16/¶19.
-
-### General observations — ¶9
-- "standard errors robust to heteroskedasticity" — the outline ¶9 says "robust standard errors"; the draft expands to the plain-language form the style skill prescribes (introduce robustness once in Methods in plain language, drop "Huber-White"/"heteroskedasticity-robust" jargon from Results). Correct placement: this is the one section where the plain gloss belongs. Cross-section watch: do not repeat this phrasing in Results.
-- Three models named (2017 cross-sectional, 2024 cross-sectional, change) plus the augmented 2017-baseline change model = Table 2's four columns. Maps cleanly to the outline's Table 2 (¶9, Exhibits). No orphan analyses within Methods; the dropped subgroup and nurse-per-bed checks are correctly absent (Open Questions #3).
-- The central comparison sentence (levels vs. change significance pattern) is present and matches outline ¶9 core and the project's headline framing. Good — and correctly stated without "central finding" narration (that belongs in Discussion).
-
-## Citation integrity (whole Methods section)
-
-All citation keys in the Methods body resolve in `HCAHPS.bib`:
-`HttpsWwwhcahpsonlineorg`, `HttpsWwwmedicaregovCarecompare`, `HttpsQualitynetcmsgovOutpatient`, `greenlundPLACESLocalData2022`, `HttpsDatacmsgovProvidercharacteristics`, `mansonNationalHistoricalGeographic2024`, `HttpsWwwersusdagovDataproducts`, `HttpsDeptswashingtoneduUwruca`. No unresolved keys, no `[@... — NOT FOUND]` flags, no `[@TBD-...]` placeholders. The title page carries `[TBD]` author/affiliation/corresponding-author fields — these are frontmatter, expected, and tracked in outline Open Questions #10; not a Methods defect, not modified.
+## Methods–Results correspondence (whole drafted scope)
+- 2017 cross-sectional model → Results ¶11 ✓; 2024 cross-sectional model → Results ¶11 ✓; change model → Results ¶12 ✓.
+- Augmented (2017-baseline) change model → column 4 figures used in Results ¶12, but its stated baseline-rating test result is unreported — see SR-1.
+- Every reported result has a described method: composition and national shifts (descriptive, ¶5 sample / ¶7–¶8 measures); level associations (cross-sectional models); change associations and rural/ownership trajectories (change and augmented models). No reverse orphan.
 
 ## Word count
+- Body word count (pandoc, gfm → plain): ~1,207 words for the current Methods + Results draft. Title page reports "1,215 (Methods and Results sections)" — the ~8-word gap is markup/rounding tolerance.
+- Against budget: main-text budget ~3,000 words (CLAUDE.md). Methods + Results at ~1,207 leaves ~1,800 for Introduction (4 paragraphs) and Discussion (6 paragraphs) — tight but workable; the outline's `[optional]`/`[support]` trim order (Open Questions #1) will matter when those sections land. No section cap to enforce now. No concern.
 
-- **Body word count (whole draft):** 720 words via the drafter's pandoc method. The draft is Methods-only at present; the title page reports "714 (Methods section only)." The 6-word gap is within rounding/markup tolerance of the pandoc count and the title-page note already scopes it to Methods. Update the title-page field to 720 at the next docx pass if exactness is wanted.
-- **Against budget:** main-text budget is ~3,000 words (CLAUDE.md). Methods at ~720 words is a reasonable share for a ~3,000-word STROBE manuscript with Intro + Results + Discussion still to draft. No section-level cap to enforce. No concern.
+## Prose-gate recommendation
+- The current draft carries no `<!-- DR-N -->` markers and there is no `draft-revisions.md`, so the per-section prose gate (deterministic linter + editorial rubric, run by the prose-reviser) may not have run on the present text. I limited this pass to cross-section style only. Recommend running the prose-reviser on both sections before peer review so the per-section style gate is on record. (I found no obvious per-section style offenders in a cross-section read — voice, concision, and word choice look clean — but that is not a substitute for the dedicated gate.)
 
-## Passes not applicable to a single-section scope
-- **Methods–Results correspondence (pass 6)** and **caveat-echo across sections (pass 7)** are whole-draft judgments and cannot be fully run while only Methods exists. Partial note: ¶7 correctly carries no ED caveat, so the single-home discipline is intact so far; re-run both passes once Results and Discussion are drafted to confirm every Methods analysis has a reported result and no caveat is echoed beyond ¶21.
+---
+
+## Resolved since the prior (Methods-only) review
+- **"either year" vs "both years" (old SR-1):** the outline ¶5 now reads "complete data, in both years," matching the draft. No discrepancy remains.
+- **Nurse salary / Cost Report data-source orphan (old SR-3):** the clause has been removed from ¶5; no orphan data source remains.
+- **"predicted" verb (old SR-5):** the augmented-model sentence now reads "was associated with," fully associational. No issue.
