@@ -178,3 +178,129 @@ methods rationale, appropriate in Methods.
   this names the analysis design rather than narrating a finding, so it is not a finding-narration slip.)
 
 No paragraph restructuring proposed.
+
+---
+
+# Results pass
+
+Section reviewed: **Results** (Sample Characteristics and National Trends; Factors Associated with Rating Levels in 2017 and 2024; Factors Associated with Rating Change).
+Artifact: manuscript. Target journal: American Journal of Public Health (general public-health dialect).
+Mode: **rewrite**. Methods section excluded (reviewed in the prior pass above).
+
+## Linter output
+
+Raw output of
+`python3 ~/.claude/skills/scientific-writing-style/style-lint.py draft.md --section results --artifact manuscript`
+(whole-file scan; only lines 52–70 are in Results scope — Methods hits at lines 38–50 belong to the prior pass):
+
+```
+# style-lint — 1 file(s)
+
+## draft.md  (21 hit(s))
+  draft.md:40: [packing_words/medium] "context" (context) | h hospital to its county context through its ZIP code and
+  draft.md:40: [packing_words/medium] "models" (model) | every factor used in the models. The resulting complete-
+  draft.md:44: [possessive_noun/medium] "bachelor's degree" (A's B → B of A) | n; the proportion with a bachelor's degree or above; the proportion
+  draft.md:50: [packing_words/medium] "model" (model) | : a 2017 cross-sectional model, a 2024 cross-sectional
+  draft.md:50: [packing_words/medium] "model" (model) | , a 2024 cross-sectional model, and a model of the 2017
+  draft.md:50: [packing_words/medium] "model" (model) | s-sectional model, and a model of the 2017-to-2024 chan
+  draft.md:50: [packing_words/medium] "model" (model) | 017 and 2024. The change model regressed the change in
+  draft.md:50: [packing_words/medium] "model" (model) | ing. An augmented change model additionally controlled
+  draft.md:50: [packing_words/medium] "models" (model) | y factors, fitting three models: a 2017 cross-sectional
+  draft.md:50: [packing_words/medium] "models" (model) | nge. The cross-sectional models regressed the rating in
+  draft.md:60: [packing_words/medium] "Levels" (level) | s Associated with Rating Levels in 2017 and 2024
+  draft.md:62: [packing_words/medium] "level" (level) | elow urban in 2017, were level with them by 2024. A lon
+  draft.md:64: [possessive_noun/medium] "bachelor's degree" (A's B → B of A) | her proportion holding a bachelor's degree or above. Lower ratings
+  draft.md:68: [packing_words/medium] "levels" (level) | s associated with rating levels, only a few were associa
+  draft.md:38: [long_sentence/low] "53 words" (split if 3+ propositions) | County factors were drawn from several sources: self-reported poor health from t…
+  draft.md:40: [long_sentence/low] "36 words" (split if 3+ propositions) | acute-care hospital entered the analytic sample only if it reported an overall H…
+  draft.md:40: [long_sentence/low] "36 words" (split if 3+ propositions) | We matched each hospital to its county context through its ZIP code and a ZIP-to…
+  draft.md:44: [long_sentence/low] "56 words" (split if 3+ propositions) | County factors comprised the prevalence of self-reported poor health; hospitals …
+  draft.md:46: [long_sentence/low] "49 words" (split if 3+ propositions) | The change measure for the outcome was the 2024 overall star rating minus the 20…
+  draft.md:50: [long_sentence/low] "42 words" (split if 3+ propositions) | We used linear regression with standard errors robust to heteroskedasticity to e…
+  draft.md:70: [long_sentence/low] "38 words" (split if 3+ propositions) | No other county shift was associated with rating change: changes in age structur…
+
+## counts by class
+  packing_words: 12
+  long_sentence: 7
+  possessive_noun: 2
+
+HIGH-priority hits: 0
+```
+
+HIGH-priority hits: **0**. No deterministic floor to clear. The medium/low hits in Results scope are adjudicated below; all four packing/possessive flags in scope clear (load-bearing contrast term, adjective false positive, idiomatic 's), so no mechanical rewrite was required in Results.
+
+## Linter adjudications (Results scope only)
+
+### DR-L1 — packing-word "Levels" (heading, line 60) — not-applied
+**Quote:** "Factors Associated with Rating **Levels** in 2017 and 2024"
+**Issue:** linter flags "Levels" as a packing word (drop test, SKILL.md §4c).
+**Disposition:** not-applied — load-bearing. "Levels" names one half of the levels-vs-change contrast that organizes the entire Results section; it pairs with the "Rating Change" heading at line 66. Dropping it ("Factors Associated with the Rating in 2017 and 2024") erases the contrast the section is built on. This is the genuine-contrast carve-out in §4c. The document uses "levels / change" consistently (headings + line 68) and does not register-mix with "scores / what moves them," so the artifact-wide drop test also passes.
+
+### DR-L2 — packing-word "level" (line 62) — not-applied (linter false positive)
+**Quote:** "large rural hospitals, which were below urban in 2017, **were level with** them by 2024"
+**Issue:** linter matched "level" as a packing-word noun.
+**Disposition:** not-applied — this is the adjective "level" meaning "even / equal," not the packing-word noun ("at the X level"). False positive; no change.
+
+### DR-L3 — possessive "bachelor's degree" (line 64) — not-applied
+**Quote:** "a higher proportion holding a **bachelor's degree** or above"
+**Issue:** linter flags A's B → B of A.
+**Disposition:** not-applied — "bachelor's degree" is an idiomatic fixed compound; "degree of a bachelor" is wrong. SKILL.md §3 yields on idiomatic 's. (The same flag at line 44 is in Methods scope, handled in the prior pass.)
+
+### DR-L4 — packing-word "levels" (line 68) — not-applied
+**Quote:** "In contrast to the broad set of factors associated with rating **levels**, only a few were associated with the 2017-to-2024 change"
+**Issue:** linter flags "levels" as a packing word.
+**Disposition:** not-applied — same load-bearing contrast term as DR-L1; this sentence is the explicit levels-vs-change pivot. Cutting "levels" would obscure the contrast that is the point of the sentence.
+
+## Rubric (Tier 3) — Results paragraphs
+
+### Sample Characteristics and National Trends (line 56)
+- **Q1 cleared:** "Two figures moved sharply between the two years" — single point (composition + national shifts), no restatement.
+- **Q3 cleared:** "moved sharply" / "figures" read as acceptable trend-magnitude language, not a journalistic slip (contrast the rubric's "moves money" example).
+- **Q4 cleared:** every claim is concrete (percentages, "3.45 to 3.27 stars", "292 to 181 minutes", "$12,800").
+- **Q5 cleared:** longest sentence ~30 words, parallel coordinated list — length aids the reader.
+- **Q6 cleared:** ends on "rising about $12,800" — concrete.
+- **Q7 cleared:** reports findings only; no interpretation or literature.
+
+### National-trends geographic paragraph (line 58)
+- **Q1 cleared:** one point — geographic distribution of gains/losses.
+- **Q4 cleared:** "three areas — Appalachia, Florida, and the West Coast" is concrete.
+- **Q6 / metadiscourse cleared:** "These are the aggregate and geographic shifts; the regressions show what was associated with the rating itself" is a genuine navigational transition from descriptive to regression results, not empty signposting.
+- **Q7 cleared:** "no sampled hospital reported a rating there in both years" is a data fact, not interpretation.
+
+### Factors Associated with Rating Levels (line 62)
+- **Q1 cleared:** topic-sentence states the point (factors stable across years); body enumerates without looping.
+- **Q5 cleared:** sentences are right-branching enumerations under ~35 words.
+- **Q6 cleared:** ends on "associated with a lower rating" — concrete.
+- **Q7 cleared:** reports the level associations only.
+
+### County-factor / against-expectation paragraph (line 64)
+- **Q1 flagged (DR-21):** the poor-health→higher-ratings association is stated twice — first in the opening list ("a higher prevalence of self-reported poor health" → higher ratings) and again as "One association ran against expectation: higher county prevalence of self-reported poor health was associated with higher ratings in both years." See DR-21.
+- **Q7 cleared (with note):** "a sign we take up in the Discussion" is an acceptable forward pointer; "ran against expectation" flags an anomaly without explaining why, so it stays in Results. See DR-21 for the borderline-emphasis judgment.
+- **Q6 cleared:** closing sentence ends on "the 2017-to-2024 change in rating" — concrete.
+
+### Factors Associated with Rating Change (line 68)
+- **Q1 cleared:** single point — few factors associated with change.
+- **Q4 cleared:** "about 0.002 stars per minute" is concrete.
+- **Q6 cleared:** "but its magnitude was near zero" — concrete enough; not an empty filler word.
+- **Q7 cleared:** reports change associations only.
+
+### Closing change paragraph (line 70)
+- **Q5 flagged (DR-22):** the 38-word sentence chains the negative result, the enumerated list, and a "so" conclusion. See DR-22.
+- **Q7 flagged (DR-22):** the "so" clause draws an inference about what the absence *means* — borderline Discussion territory. See DR-22.
+- **Q6 cleared:** ends on "more than government hospitals" — concrete.
+
+## Flagged entries — author judgment
+
+### DR-21 — looping (Q1) + opening-anomaly emphasis (Q7)
+**Quote:** "Among county factors, higher ratings were associated with ... a higher prevalence of self-reported poor health ... One association ran against expectation: higher county prevalence of self-reported poor health was associated with higher ratings in both years, a sign we take up in the Discussion."
+**Issue:** the poor-health→higher-ratings result appears twice in one paragraph (Q1, SKILL.md §3 "one idea per paragraph"). The second mention is not pure redundancy — it singles the result out as counterintuitive and forward-points to the Discussion.
+**Fix (candidate, not applied):** drop the result from the opening list and let the dedicated "ran against expectation" sentence carry it once — e.g., open the list with "more hospitals per 1,000 residents and a higher proportion holding a bachelor's degree or above," then keep the anomaly sentence.
+**Status:** flagged — needs author judgment. Whether to keep the deliberate double-mention (emphasis + forward pointer) or collapse to one mention is an emphasis decision the reviser cannot make cold.
+
+### DR-22 — sentence-load (Q5) + interpretive "so" clause (Q7)
+**Quote:** "No other county shift was associated with rating change: changes in age structure, racial composition, foreign-born proportion, education, and poverty were all unrelated to it, so shifts in population composition do not account for the shift in ratings."
+**Issue:** (Q5) the sentence stacks three propositions — the headline negative, the enumerated list, and a "so" conclusion. (Q7) the "so" clause ("shifts in population composition do not account for the shift in ratings") draws an inference about what the absence *means*, which edges toward Discussion.
+**Fix (candidate, not applied):** split after the list and either keep the summary as its own descriptive sentence ("No shift in population composition tracked the change in ratings.") or move the inference to the Discussion.
+**Status:** flagged — needs author judgment. The clause is a tight restatement of the negative result rather than a causal mechanism, so it is defensible in Results; splitting also changes emphasis. The author should decide whether it reads as reporting or as interpretation.
+
+No paragraph restructuring proposed beyond the two flagged candidates above.
