@@ -27,8 +27,9 @@ python3 scripts/prepare-zotero-cites.py \
   --out-md "$TMP/draft-tokens.md" \
   --out-cites "$TMP/cites.json"
 
+# -auto_identifiers: don't add per-heading bookmarks (Word shows them as gray "[" brackets)
 pandoc "$TMP/draft-tokens.md" -o "$TMP/draft-nofields.docx" \
-  --from markdown --to docx --reference-doc="$REF"
+  --from markdown-auto_identifiers --to docx --reference-doc="$REF"
 
 python3 scripts/inject-zotero-fields.py \
   --docx "$TMP/draft-nofields.docx" \
