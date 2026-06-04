@@ -1,0 +1,15 @@
+{
+  "_comment": "Maps Better BibTeX citekeys -> live Zotero item keys for scannable-cite generation (Zotero RTF/ODF Scan). Library 5085299 (user), collection BSDVTKC7 (HCAHPS). Regenerate with the Zotero MCP (zotero_get_collection_items BSDVTKC7) when items are added/renamed. Resolved 2026-06-04.",
+  "_libraryID": "5085299",
+  "_libraryType": "user",
+  "map": {
+    "greenlundPLACESLocalData2022":            { "itemKey": "EP38DSPE", "label": "Greenlund et al., 2022" },
+    "mansonNationalHistoricalGeographic2024":  { "itemKey": "4EBRUS2H", "label": "Manson et al., 2024" },
+    "HttpsWwwhcahpsonlineorg":                 { "itemKey": "V7736AP9", "label": "CMS HCAHPS" },
+    "HttpsWwwmedicaregovCarecompare":          { "itemKey": "QTFXSHD4", "label": "CMS Care Compare" },
+    "HttpsQualitynetcmsgovOutpatient":         { "itemKey": "DTGG6X4Z", "label": "CMS OQR Specifications Manual" },
+    "HttpsDatacmsgovProvidercharacteristics":  { "itemKey": "TZBHM9N8", "label": "CMS Provider of Services File" },
+    "HttpsWwwersusdagovDataproducts":          { "itemKey": "CZEC3VUV", "label": "USDA ERS RUCA" },
+    "HttpsDeptswashingtoneduUwruca":           { "itemKey": "WMS8Q3FI", "label": "UW WWAMI RUCA" }
+  }
+}

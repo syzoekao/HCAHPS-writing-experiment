@@ -56,14 +56,10 @@ All data live in Windows OneDrive paths (`C:\Users\z0055u8k\OneDrive - Siemens H
 - `reference-research.md` — Reference notebook for managing citations; candidates are appended here for asynchronous review before importing to Zotero.
 - The Zotero MCP integration (`mcp__zotero__*`) is available for reference management.
 - Manuscript drafting uses the `outline`, `draft`, `self-review`, and `peer-review` skills.
-- Convert the manuscript `draft.md` to `.docx` with (run from the repo root):
-  ```
-  pandoc manuscript/draft.md -o manuscript/draft.docx \
-    --from markdown --to docx \
-    --citeproc --bibliography=references.bib --csl=$HOME/.csl/ama.csl \
-    --reference-doc=pandoc-reference-manuscript.docx
-  ```
-  Use `--from markdown` (NOT `gfm`): the title page uses Pandoc fenced-divs, a raw-openxml page break, `^superscript^`, and `[@citation]` keys, all of which `gfm` prints literally. `pandoc-reference-manuscript.docx` sets Calibri + **double line spacing + continuous line numbers** (manuscript-review format); it is the repo copy of `$HOME/.pandoc/reference-manuscript.docx`, which the drafter's `--docx` uses. The generic `pandoc-reference.docx` (single-spaced, no line numbers) is kept for non-manuscript outputs. `references.bib` is the Zotero Better BibTeX auto-export (see `manuscript/CLAUDE.md`); `$HOME/.csl/ama.csl` is the AMA style (fetch from zotero.org/styles if absent on a new machine).
+- **Build the manuscript `.docx` with `bash scripts/build-docx.sh`** (run from the repo root). It produces `manuscript/draft.docx` with manuscript-review formatting **and live, refreshable Zotero citation fields** — open it in Word, click Zotero → **Refresh** (pick **AMA** on first run), then **Add/Edit Bibliography** to insert the reference list. The pipeline: `references.bib` → CSL-JSON → `[@key]` citations rewritten to placeholder tokens (item keys from `manuscript/zotero-item-keys.json`) → pandoc with `--from markdown` and `--reference-doc=$HOME/.pandoc/reference-manuscript.docx` (NO citeproc) → `scripts/inject-zotero-fields.py` wraps each token in a `ZOTERO_ITEM CSL_CITATION` field. Helper scripts: `scripts/prepare-zotero-cites.py`, `scripts/inject-zotero-fields.py`.
+  - **`manuscript/zotero-item-keys.json`** maps Better BibTeX citekeys → Zotero item keys (library 5085299, collection BSDVTKC7). Regenerate via the Zotero MCP (`zotero_get_collection_items BSDVTKC7`) whenever items are added or renamed; if a citekey is missing the build errors and names it.
+  - `pandoc-reference-manuscript.docx` (= `$HOME/.pandoc/reference-manuscript.docx`, used by the drafter's `--docx`): Calibri, **single-spaced black title page, double-spaced black body, first-line indents, no inter-paragraph/heading spacing, continuous line numbers**. The generic `pandoc-reference.docx` is kept for non-manuscript outputs.
+  - Quick **static** preview (no Zotero interactivity) — useful for a fast look: `pandoc manuscript/draft.md -o manuscript/draft.docx --from markdown --citeproc --bibliography=references.bib --csl=$HOME/.csl/ama.csl --reference-doc=pandoc-reference-manuscript.docx`. Use `--from markdown` (NOT `gfm`): the title page uses fenced-divs, a raw-openxml page break, `^superscript^`, and `[@citation]` keys that `gfm` prints literally. `$HOME/.csl/ama.csl` = AMA style (fetch from zotero.org/styles if absent).
 
 ## Experiment audit trail
 
