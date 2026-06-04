@@ -30,3 +30,6 @@ __pycache__/
 *.pem
 
 readings/
+
+# Superseded versions kept locally for reference, not tracked
+manuscript/outdated/
