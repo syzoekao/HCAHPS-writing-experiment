@@ -22,7 +22,11 @@ __pycache__/
 .venv/
 
 # Pandoc-generated outputs (regenerable from .md)
-# (existing .docx files are kept; this only blocks new ones if any pattern matches)
+# (reference-doc templates like pandoc-reference*.docx are kept; only generated output is ignored)
+manuscript/draft.docx
+
+# Office temp/lock files
+~$*
 
 # Sensitive
 .env

@@ -56,7 +56,14 @@ All data live in Windows OneDrive paths (`C:\Users\z0055u8k\OneDrive - Siemens H
 - `reference-research.md` — Reference notebook for managing citations; candidates are appended here for asynchronous review before importing to Zotero.
 - The Zotero MCP integration (`mcp__zotero__*`) is available for reference management.
 - Manuscript drafting uses the `outline`, `draft`, `self-review`, and `peer-review` skills.
-- Convert `.md` files to `.docx` with: `pandoc <file>.md -o <file>.docx --from gfm --to docx --reference-doc=pandoc-reference.docx` (run from the repo root). The reference doc `pandoc-reference.docx` sets Calibri for both body text and headings — without it, pandoc's default theme renders body text in Cambria.
+- Convert the manuscript `draft.md` to `.docx` with (run from the repo root):
+  ```
+  pandoc manuscript/draft.md -o manuscript/draft.docx \
+    --from markdown --to docx \
+    --citeproc --bibliography=references.bib --csl=$HOME/.csl/ama.csl \
+    --reference-doc=pandoc-reference-manuscript.docx
+  ```
+  Use `--from markdown` (NOT `gfm`): the title page uses Pandoc fenced-divs, a raw-openxml page break, `^superscript^`, and `[@citation]` keys, all of which `gfm` prints literally. `pandoc-reference-manuscript.docx` sets Calibri + **double line spacing + continuous line numbers** (manuscript-review format); it is the repo copy of `$HOME/.pandoc/reference-manuscript.docx`, which the drafter's `--docx` uses. The generic `pandoc-reference.docx` (single-spaced, no line numbers) is kept for non-manuscript outputs. `references.bib` is the Zotero Better BibTeX auto-export (see `manuscript/CLAUDE.md`); `$HOME/.csl/ama.csl` is the AMA style (fetch from zotero.org/styles if absent on a new machine).
 
 ## Experiment audit trail
 

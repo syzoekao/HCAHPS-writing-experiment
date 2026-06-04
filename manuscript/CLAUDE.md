@@ -99,7 +99,18 @@ Paths are relative to this manuscript subfolder (`manuscript/`).
 - `../stata/hospitallevel_do.do` — main analysis file (levels 2017, levels 2024, change models; `estout` outputs written to `.txt`).
 - `../stata/do.do`, `../stata/do 1.do`, `../stata/do 2.do` — upstream data prep (hospital general info, HCAHPS waves, ACS demographics).
 - `../project info/info for genAI.docx` — background brief and data-source inventory.
-- `../references.bib` — Zotero → Better BibTeX auto-export at the project root (not yet set up; drafter walks up from this folder to find it).
+- `../references.bib` — the bibliography, at the repo root (renamed from `HCAHPS.bib` on 2026-06-04). The drafter auto-discovers it by walking up from this folder; the Pandoc command points at it directly. **Keep it current via Better BibTeX auto-export** (setup below) rather than re-exporting by hand.
+
+### Refreshing references.bib from Zotero (Better BibTeX auto-export)
+
+The bibliography is meant to stay live, not be a frozen snapshot. To wire the Zotero → `references.bib` auto-refresh (do this once, in Zotero desktop on the machine where the repo is checked out / bind-mounted):
+
+1. Zotero desktop with the Better BibTeX plugin installed (the `[@citekey]` keys in the draft are BBT keys).
+2. Right-click the **HCAHPS** collection (Zotero collection key `BSDVTKC7`, library `5085299`) → **Export Collection…** → format **Better BibTeX**, tick **Keep updated**.
+3. Save as `references.bib` at the **repo root** (`/workspaces/HCAHPS/references.bib`; on the host this is wherever the repo is checked out — the devcontainer must see the same file via its bind mount).
+4. BBT then rewrites `references.bib` automatically whenever the collection changes; the next `pandoc … --bibliography=references.bib …` (or drafter `--docx`) picks up the changes. No manual export, no hand-editing of entries.
+
+`references.bib` is kept tracked in git so the `.docx` is reproducible by collaborators/CI; commit it when the library changes meaningfully. The Zotero MCP (`mcp__zotero__*`, web API, library 5085299) is available as a fallback for on-demand lookups but is **not** the standing refresh mechanism.
 
 ## Project-specific notes
 
